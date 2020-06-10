@@ -10,158 +10,176 @@
 
   <body>
     <main>
-      <form class="form">
+      <header class="header">
+        <section>
+          <h1>FORMULARZ KONTAKTOWY</h1>
+        </section>
+      </header>
+
+      <form method="post" action="https://dev.cotenfrontend.pl" class="form">
         <p>
-          <label for="firstName">Imię:</label>
-          <input class="form__item" id="firstName" name="firstName" />
+          <label>Imię:</label>
+          <input required class="form__item" name="firstName" id="firstName" />
         </p>
         <p>
           <label>Nazwisko:</label>
-          <input
-            class="form__item"
-            type="text"
-            value="Zubala"
-            id="lastName"
-            name="lastName"
-          />
+          <input required class="form__item" name="lastName" id="lastName" />
         </p>
         <p>
           <label>Wiek:</label>
+          <input class="form__item" type="number" name="age" id="age" />
+        </p>
+        <p>
+          <label>Numer telefonu:</label>
           <input
+            required
             class="form__item"
-            type="number"
-            id="age"
-            placeholder="Podaj swój wiek"
-            name="age"
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
           />
         </p>
         <p>
-            <label>Numer telefonu:</label>
-            <input
-              class="form__item"
-              type="tel"
-              id="phoneNumber"
-              placeholder="Podaj swój numer telefonu"
-              name="phoneNumber"
-            />
-          </p>
-          <p>
-            <label>Adres e-mail:</label>
-            <input
-              class="form__item"
-              type="email"
-              id="email"
-              placeholder="Podaj swój adres e-mail"
-              name="email"
-            />
-          </p>
+          <label>Adres e-mail:</label>
+          <input
+            required
+            class="form__item"
+            type="email"
+            name="email"
+            id="email"
+          />
+        </p>
 
-        <fieldset>
+        <fieldset class="form__item form__item--fieldset">
           <legend>Adres:</legend>
           <p>
             <label>
               Ulica:
-              <input
-                class="form__item"
-                id="street"
-                placeholder="Podaj nazwę ulicy"
-                name="street"
-              />
+              <input class="form__item" name="street" id="street" />
             </label>
           </p>
           <p>
             <label>
               Kod pocztowy:
-              <input
-                class="form__item"
-                id="postcode"
-                placeholder="Podaj kod pocztowy"
-                name="postcode"
-              />
+              <input class="form__item" name="postcode" id="postcode" />
             </label>
           </p>
           <p>
             <label>
               Miasto:
-              <input
-                class="form__item"
-                id="city"
-                placeholder="Podaj miasto"
-                name="city"
-              />
+              <input class="form__item" name="city" id="city" />
             </label>
           </p>
         </fieldset>
 
         <p>
-            <label>Liczba hodowanych kaktusów:</label>
-            <input
-              class="form__item"
-              type="number"
-              id="numberOfCacti"
-              placeholder="Podaj liczbę hodowanych przez siebie kaktusów"
-              name="numberOfCacti"
-            />
-          </p>
-          <p>
-            <label>Jaki procent Twojego czasu zajmuje pielęgnacja kaktusów?</label>
-            <input
-              class="form__item"
-              type="range"
-              min="0"
-              max="100"
-              step="10"
-              id="timeSpent"
-              name="timeSpent"
-            />
-          </p>
+          <label for="favouriteCoffee"
+            >Wybierz swój ulubiony rodzaj kawy:</label
+          >
+          <select
+            class="form__item"
+            name="favouriteCoffee"
+            id="favouriteCoffee"
+          >
+            <option value="coffee-type-1">Espresso</option>
+            <option value="coffee-type-2">Latte</option>
+            <option value="coffee-type-3">Mocha</option>
+            <option value="coffee-type-4">Cappuccino</option>
+            <option value="coffee-type-5">Flat white</option>
+          </select>
+        </p>
 
-        <fieldset>
-            <legend>Co wyniesiesz najpierw z domu, gdy wybuchnie pożar?</legend>
-            <p>
-              <label
-                ><input
-                  name="fire"
-                  type="radio"
-                  value="Ukochanego kaktusa"
-                />Ukochanego kaktusa</label
-              >
-            </p>
-            <p>
-              <label
-                ><input name="fire" type="radio" value="Teściową" />Teściową</label
-              >
-            </p>
-            <p>
-              <label
-                ><input name="fire" type="radio" value="Sztabki złota" />Sztabki złota</label
-              >
-            </p>
-            <p>
-                <label
-                  ><input name="fire" type="radio" value="Biblię i Pana Tadeusza" />Biblię i Pana Tadeusza</label
-                >
-              </p>
-          </fieldset>
+        <p>
+          <label>Liczba hodowanych kaktusów:</label>
+          <input
+            class="form__item"
+            type="number"
+            name="numberOfCacti"
+            id="numberOfCacti"
+          />
+        </p>
+        <p>
+          <label
+            >Jaki procent Twojego czasu zajmuje pielęgnacja kaktusów?</label
+          >
+          <input
+            class="form__item"
+            type="range"
+            min="0"
+            max="100"
+            step="10"
+            name="timeSpent"
+            id="timeSpent"
+          />
+        </p>
 
+        <fieldset class="form__item form__item--fieldset">
+          <legend>Co wyniesiesz najpierw z domu, gdy wybuchnie pożar?</legend>
           <p>
-            <label>Pochwal się zdjęciem swojego ulubonego kaktusa!</label>
-            <input
-              class="form__item"
-              type="file"
-              id="photo"
-              name="photo"
-            />
+            <label
+              ><input
+                name="fire"
+                type="radio"
+                value="Ukochanego kaktusa"
+              />Ukochanego kaktusa</label
+            >
           </p>
           <p>
-            <label>Wpisz poniżej swoje hasło użytkownika:</label>
-            <input
-              class="form__item"
-              type="password"
-              id="userPassword"
-              name="userPassword"
-            />
+            <label
+              ><input
+                name="fire"
+                type="radio"
+                value="Teściową"
+              />Teściową</label
+            >
           </p>
+          <p>
+            <label
+              ><input name="fire" type="radio" value="Sztabki złota" />Sztabki
+              złota</label
+            >
+          </p>
+          <p>
+            <label
+              ><input
+                name="fire"
+                type="radio"
+                value="Biblię i Pana Tadeusza"
+              />Biblię i Pana Tadeusza</label
+            >
+          </p>
+        </fieldset>
+
+        <p>
+          <label>Pochwal się zdjęciem swojego ulubionego kaktusa!</label>
+          <input
+            class="form__item form__item--button1"
+            type="file"
+            name="photo"
+            id="photo"
+          />
+        </p>
+
+        <p>
+          <label for="yourMessage">Twoja wiadomość:</label>
+          <textarea
+            required
+            class="form__item"
+            name="yourMessage id="
+            yourMessage
+          ></textarea>
+        </p>
+
+        <p>
+          <label>Wpisz swoje hasło użytkownika:</label>
+          <input
+            required
+            class="form__item"
+            type="password"
+            name="userPassword"
+            id="userPassword"
+          />
+        </p>
 
         <p>
           <label
@@ -170,6 +188,12 @@
             Kaktus na dłoni.</label
           >
         </p>
+
+        <input
+          class="form__item form__item--button2"
+          type="submit"
+          value="Wyślij formularz"
+        />
       </form>
     </main>
   </body>

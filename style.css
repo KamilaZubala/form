@@ -1,19 +1,63 @@
-body {
-    display: flex;
-    background: blueviolet;
-    color: white;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-
+html {
+  box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  background: #39c643;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font: 16px Georgia, sans-serif;
+  font-weight: bold;
+  color: #085429;
+}
 
 .form {
-
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  margin-bottom: 64px;
+  padding: 32px;
+  border-radius: 16px;
+  width: 640px;
 }
 
 .form__item {
-    display: block;
+  display: block;
+  border-radius: 16px;
+  width: 320px;
+}
+
+
+.form__item--button1 {
+  background-color: orange;
+  color: white;
+  font: 16px Georgia, sans-serif;
+}
+
+.form__item--button2 {
+  margin-top: 32px;
+  background-color: #085429;
+  color: white;
+  font: 20px Georgia, sans-serif;
+  font-weight: bold;
+}
+
+.form__item--fieldset {
+    border-style: hidden;
     width: 100%;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px;
 }
